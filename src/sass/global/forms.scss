@@ -1,0 +1,33 @@
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea,
+select,
+input[type="password"] {
+  box-sizing: border-box;
+  outline: none;
+
+  &:focus {
+
+  }
+}
+
+label {
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: none;
+}
+
+input[type="checkbox"] + label
+input[type="radio"] + label {
+  display: inline-block;
+  vertical-align: middle;
+}
