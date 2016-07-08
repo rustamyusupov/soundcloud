@@ -1,0 +1,23 @@
+.subscribe {
+  min-height: 362px;
+
+  &__wrapper {
+    @include container;
+
+    padding-top: 100px;
+  }
+
+  &__title {
+    @include title;
+  }
+
+  &__subtitle {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  &__form {
+    position: relative;
+    text-align: center;
+  }
+}

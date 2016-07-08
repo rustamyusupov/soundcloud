@@ -1,0 +1,23 @@
+.contacts {
+  min-height: 330px;
+  text-align: center;
+
+  &__title {
+    @include container;
+
+    margin-bottom: 40px;
+    padding-top: 60px;
+  }
+
+  &__social {
+    margin-bottom: 70px;
+  }
+
+  &__link {
+    margin-right: 60px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

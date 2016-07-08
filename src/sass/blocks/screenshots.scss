@@ -1,0 +1,52 @@
+.screenshots {
+  min-height: 764px;
+  text-align: center;
+
+  &__title {
+    @include title;
+
+    padding-top: 70px;
+  }
+
+  &__subtitle {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  &__slider {
+    margin: 0 auto;
+    position: relative;
+    width: 1300px; /* слайды + кнопки */
+  }
+
+  &__frame {
+    font-size: 0;
+    line-height: 0;
+    margin: 0 auto;
+    margin-bottom: 35px;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    width: 1300px; /* все слайды минус отступ справа у последнего */
+  }
+
+  &__list {
+    display: inline-block;
+    padding: 0; /* для прокрутки назад */
+    vertical-align: top;
+  }
+
+  &__item {
+    display: inline-block;
+    height: 428px; /* * */
+    /* margin-right: 57px; */ // отступы между элементами
+    position: relative;
+    text-align: center;
+    vertical-align: top;
+    width: 241px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

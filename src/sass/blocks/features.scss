@@ -1,0 +1,35 @@
+.features {
+  min-height: 646px;
+
+  &__wrapper {
+    @include container;
+
+    padding-top: 70px;
+  }
+
+  &__title {
+    @include title;
+  }
+
+  &__subtitle {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__list {
+    width: 30%;
+
+    &--left {
+      text-align: right;
+    }
+
+    &--right {
+      text-align: left;
+    }
+  }
+}

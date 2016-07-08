@@ -1,0 +1,10 @@
+.welcome {
+  min-height: 720px;
+
+  &__wrapper {
+    @include container;
+
+    padding-top: 240px;
+  }
+
+}

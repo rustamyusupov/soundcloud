@@ -1,0 +1,24 @@
+.tweets {
+  min-height: 570px;
+
+  &__wrapper {
+    @include container;
+
+    padding-top: 60px;
+    text-align: center;
+  }
+
+  &__title {
+    @include title;
+  }
+
+  &__subtitle {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  &__list {
+    margin: 0 auto;
+    width: 60%;
+  }
+}

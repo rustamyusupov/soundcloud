@@ -1,0 +1,15 @@
+.menu {
+  @include container;
+
+  padding-top: 50px;
+  position: fixed; // TODO: разобраться с позиционированием и выравниванием
+  text-align: right;
+  z-index: 10;
+
+  &--close &__list {
+    display: none;
+  }
+
+  // TODO: изменение цвета в зависимости от фона/блока
+  // TODO: анимация для бургера
+}
