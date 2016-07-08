@@ -1,24 +1,44 @@
 .tweets {
+  background-color: $blue-dark-very-grayish;
+  background-image: url("../img/bg-tweets.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   min-height: 570px;
 
   &__wrapper {
     @include container;
 
-    padding-top: 60px;
+    padding-top: 69px;
     text-align: center;
   }
 
   &__title {
     @include title;
+
+    color: $white;
+    margin-bottom: 17px;
   }
 
   &__subtitle {
-    margin-bottom: 40px;
+    color: $white;
+    margin-bottom: 39px;
     text-align: center;
   }
 
   &__list {
     margin: 0 auto;
+    margin-bottom: 37px;
     width: 60%;
+  }
+
+  &__item {
+    color: $blue-dark-grayish2;
+    line-height: 26px;
+    margin-bottom: 46px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
