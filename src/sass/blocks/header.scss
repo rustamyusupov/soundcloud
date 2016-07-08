@@ -1,3 +1,7 @@
 header {
-  @include container;
+  padding-top: 47px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1005px;
 }

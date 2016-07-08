@@ -4,6 +4,7 @@ body {
   background-color: $white-mostly;
   color: $blue-dark;
   line-height: 18px;
+  position: relative;
 }
 
 h1,
@@ -22,10 +23,4 @@ ul {
 
 a {
   text-decoration: none;
-}
-
-button:focus,
-input:focus,
-textarea:focus {
-  outline: none;
 }

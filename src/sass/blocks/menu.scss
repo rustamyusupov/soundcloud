@@ -1,15 +1,101 @@
 .menu {
-  @include container;
-
-  padding-top: 50px;
-  position: fixed; // TODO: разобраться с позиционированием и выравниванием
+  align-items: flex-end;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  position: relative;
   text-align: right;
   z-index: 10;
 
-  &--close &__list {
-    display: none;
+  &__trigger {
+    @include font($proxima, 18px, 600);
+
+    align-items: center;
+    background: none;
+    border: none;
+    color: $gray-very-light;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    padding: 0;
+    top: 48px;
+    width: 92px;
+    z-index: 10;
   }
 
-  // TODO: изменение цвета в зависимости от фона/блока
+  &__trigger > span {
+    background: $white;
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    transition: background 0.3s 0.5s;
+    vertical-align: bottom;
+    width: 21px;
+
+    &::before,
+    &::after {
+      background: $white;
+      content: "";
+      height: 2px;
+      left: 0;
+      position: absolute;
+      transition: top 0.3s 0.3s, transform 0.3s;
+      width: 100%;
+    }
+
+    &::before {
+      top: -6px;
+    }
+
+    &::after {
+      top: 6px;
+    }
+  }
+
+  &--show &__trigger {
+    font-size: 0;
+  }
+
+  &--show &__trigger > span {
+    background: none;
+
+    &::before,
+    &::after {
+      top: 0;
+    }
+
+    &::before {
+      transform: rotate3d(0, 0, 1, 45deg);
+    }
+
+    &::after {
+      transform: rotate3d(0, 0, 1, -45deg);
+    }
+  }
+
+  &__list {
+    display: none;
+    /* margin-right: 43px; */
+  }
+
+  &--show &__list {
+    display: block;
+  }
+
+  &__item {
+    cursor: pointer;
+    margin-bottom: 7px;
+  }
+
+  &__link {
+    @include font($proxima, 18px, 400);
+
+    color: $blue-dark;
+  }
+
   // TODO: анимация для бургера
+  // TODO: изменение цвета в зависимости от фона/блока
 }
