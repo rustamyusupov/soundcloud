@@ -1,8 +1,18 @@
 .btn {
+  @include font($proxima, 16px, 600);
+
+  border: 1px solid $white;
+  border-radius: 30px;
   box-sizing: border-box;
+  color: $white;
   cursor: pointer;
   display: inline-block;
+  letter-spacing: 0.7px;
+  line-height: 36px;
   outline: none;
+  padding: 0 10px;
+  padding-bottom: 4px;
+  padding-top: 5px;
   text-align: center;
   text-decoration: none;
   vertical-align: top;
@@ -13,6 +23,17 @@
 
   &:active {
 
+  }
+
+  &--more {
+    margin-right: 21px;
+    padding-left: 32px;
+    padding-right: 27px;
+  }
+
+  &--download {
+    padding-left: 36px;
+    padding-right: 36px;
   }
 
   &--submit {

@@ -1,13 +1,41 @@
 .welcome {
+  background-color: $mostly-black;
   background-image: url("../img/bg-welcome.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 720px;
+  color: $white;
+  min-height: 721px;
 
   &__wrapper {
     @include container;
 
-    padding-top: 240px;
+    padding-top: 228px;
+  }
+
+  &__title {
+    @include font($proxima, 32px, 700);
+
+    letter-spacing: 1.5px;
+    line-height: 55.34px;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    @include font($proxima, 38px, 300);
+
+    letter-spacing: 1.1px;
+    line-height: 35px;
+    margin-bottom: 37px;
+    width: 50%;
+  }
+
+  &__subtitle {
+    @include font($proxima, 16px, 600);
+
+    letter-spacing: 0.5px;
+    line-height: 35px;
+    margin-bottom: 35px;
+    text-transform: uppercase;
   }
 
 }
