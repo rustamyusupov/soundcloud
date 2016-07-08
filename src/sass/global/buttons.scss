@@ -37,7 +37,14 @@
   }
 
   &--submit {
+    background: transparent;
+    border: none;
+    font-size: 0;
+    height: 25px;
+    left: 759px;
+    padding: 0;
     position: absolute;
-    left: 50%;
+    top: 21px;
+    width: 27px;
   }
 }

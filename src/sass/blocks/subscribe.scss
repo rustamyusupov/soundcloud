@@ -1,23 +1,74 @@
 .subscribe {
+  background-color: $mostly-black;
+  background-image: url("../img/bg-subscribe.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   min-height: 362px;
 
   &__wrapper {
     @include container;
 
-    padding-top: 100px;
+    padding-top: 113px;
   }
 
   &__title {
     @include title;
+
+    color: $white;
+    letter-spacing: 0.7px;
+    margin-bottom: 17px;
   }
 
   &__subtitle {
-    margin-bottom: 50px;
+    color: $white;
+    font-weight: 300;
+    letter-spacing: 1.6px;
+    margin-bottom: 51px;
     text-align: center;
   }
 
   &__form {
     position: relative;
     text-align: center;
+
+    &::after {
+      border-left: 1px solid $white;
+      content: "";
+      color: $white;
+      height: 19px;
+      left: 611px;
+      position: absolute;
+      top: 23px;
+      width: 1px;
+    }
+  }
+
+  &__email {
+    @include font($proxima, 20px, 300);
+
+    background-color: rgba($white, 0.2);
+    border: none;
+    border-radius: 35px;
+    color: $white;
+    letter-spacing: 0.7px;
+    line-height: 18px;
+    padding-bottom: 25px;
+    padding-left: 30px;
+    padding-right: 222px;
+    padding-top: 22px;
+    text-align: right;
+    width: 624px;
+
+    &::placeholder {
+      color: $white;
+    }
+  }
+
+  &__icon {
+    fill: $white;
+    left: 0;
+    position: absolute;
+    top: 0;
   }
 }
