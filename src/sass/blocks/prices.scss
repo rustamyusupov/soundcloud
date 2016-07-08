@@ -4,15 +4,18 @@
   &__wrapper {
     @include container;
 
-    padding-top: 60px;
+    padding-top: 73px;
   }
 
   &__title {
     @include title;
+
+    letter-spacing: 0.7px;
+    margin-bottom: 16px;
   }
 
   &__subtitle {
-    margin-bottom: 30px;
+    margin-bottom: 33px;
     text-align: center;
   }
 
@@ -22,6 +25,36 @@
   }
 
   &__item {
+    border: 1px solid $grey-dark;
     text-align: center;
+    width: 29.1%;
+  }
+
+  &__name {
+    @include font($proxima, 16px, 600);
+
+    color: $blue-very-dark;
+    padding-bottom: 40px;
+    padding-top: 46px;
+  }
+
+  &__price {
+    @include font($proxima, 35px, 300);
+
+    border-bottom: 1px solid $grey-dark;
+    border-top: 1px solid $grey-dark;
+    padding-bottom: 22px;
+    padding-top: 25px;
+  }
+
+  &__symbol {
+    font-size: 26px;
+  }
+
+  &__desc {
+    line-height: 43px;
+    margin-bottom: 26px;
+    margin-right: 10px;
+    padding-top: 26px;
   }
 }

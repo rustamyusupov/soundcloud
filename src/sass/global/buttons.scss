@@ -47,4 +47,22 @@
     top: 21px;
     width: 27px;
   }
+
+  &--buy,
+  &--popular {
+    background-color: transparent;
+    border: 1px solid $blue-dark-grayish;
+    color: $blue-very-dark;
+    letter-spacing: -0.1px;
+    margin-bottom: 28px;
+    padding-bottom: 9px;
+    padding-left: 52px;
+    padding-right: 55px;
+    padding-top: 7px;
+  }
+
+  &--popular {
+    padding-left: 37px;
+    padding-right: 40px;
+  }
 }
