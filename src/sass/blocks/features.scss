@@ -4,15 +4,17 @@
   &__wrapper {
     @include container;
 
-    padding-top: 70px;
+    padding-top: 74px;
   }
 
   &__title {
     @include title;
+
+    margin-bottom: 17px;
   }
 
   &__subtitle {
-    margin-bottom: 20px;
+    margin-bottom: 31px;
     text-align: center;
   }
 
@@ -22,7 +24,8 @@
   }
 
   &__list {
-    width: 30%;
+    margin-top: 49px;
+    width: 25%;
 
     &--left {
       text-align: right;
@@ -30,6 +33,61 @@
 
     &--right {
       text-align: left;
+    }
+  }
+
+  &__item {
+    margin-bottom: 142px;
+    position: relative;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::after {
+      content: "";
+      border: 2px solid $blue-dark-desaturated;
+      border-radius: 50%;
+      height: 53px;
+      position: absolute;
+      top: -7px;
+      width: 53px;
+    }
+  }
+
+  &__list--left &__item::after {
+    right: -80px;
+  }
+
+  &__list--right &__item::after {
+    left: -80px;
+  }
+
+  &__item-title {
+    @include font($proxima, 20px, 600);
+
+    color: $blue-very-dark;
+    display: block;
+    line-height: 18px;
+    margin-bottom: 20px;
+  }
+
+  &__icon {
+    fill: $blue-dark-desaturated;
+    position: absolute;
+    right: -65px;
+    top: 9px;
+
+    &--upload {
+      left: -63px;
+      right: auto;
+      top: 10px;
+    }
+
+    &--mini {
+      left: -65px;
+      right: auto;
+      top: 6px;
     }
   }
 }
