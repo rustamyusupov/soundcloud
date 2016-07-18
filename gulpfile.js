@@ -36,7 +36,8 @@ let paths = {
 let config = {
   server: './build',
   host: 'localhost',
-  port: 3000
+  port: 3000,
+  open: false
 };
 
 function lazyRequireTask(name, path, options) {
