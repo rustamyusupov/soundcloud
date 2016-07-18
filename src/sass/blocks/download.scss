@@ -8,14 +8,15 @@
   &__wrapper {
     @include container;
 
-    padding-top: 80px;
+    padding-top: 96px;
     text-align: center;
   }
 
   &__title {
     @include title;
 
-    margin-bottom: 90px;
+    color: $white-mostly;
+    margin-bottom: 99px;
   }
 
 }

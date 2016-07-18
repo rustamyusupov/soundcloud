@@ -86,6 +86,42 @@
 
   &--prev {
     margin-right: 13px;
+  }
 
+  &--app {
+    border-color: $blue-light-grayish;
+    border-width: 2px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 18px;
+    margin-right: 55px;
+    padding-bottom: 14px;
+    padding-left: 48px;
+    padding-top: 16px;
+    position: relative;
+    width: 238px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__icon {
+    fill: $white;
+    position: absolute;
+    top: 14px;
+
+    &--apple {
+      left: 56px;
+    }
+
+    &--android {
+      left: 54px;
+    }
+
+    &--windows {
+      left: 39px;
+      top: 17px;
+    }
   }
 }
