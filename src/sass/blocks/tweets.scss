@@ -37,6 +37,10 @@
     line-height: 26px;
     margin-bottom: 46px;
 
+    &:nth-child(n+4) {
+      display: none;
+    }
+
     &:last-child {
       margin-bottom: 0;
     }
