@@ -73,4 +73,19 @@
     padding-bottom: 7px;
     padding-top: 7px;
   }
+
+  &--prev,
+  &--next {
+    color: $blue-very-dark;
+    background: none;
+    border-color: $blue-dark-very-grayish;
+    line-height: 18px;
+    padding: 16px 24px;
+    text-transform: uppercase;
+  }
+
+  &--prev {
+    margin-right: 13px;
+
+  }
 }

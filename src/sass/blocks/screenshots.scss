@@ -1,15 +1,16 @@
 .screenshots {
-  min-height: 764px;
+  min-height: 763px;
   text-align: center;
 
   &__title {
     @include title;
 
-    padding-top: 70px;
+    margin-bottom: 17px;
+    padding-top: 76px;
   }
 
   &__subtitle {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     text-align: center;
   }
 
@@ -23,7 +24,7 @@
     font-size: 0;
     line-height: 0;
     margin: 0 auto;
-    margin-bottom: 35px;
+    margin-bottom: 29px;
     overflow: hidden;
     position: relative;
     white-space: nowrap;
@@ -32,18 +33,35 @@
 
   &__list {
     display: inline-block;
+    height: 454px;
+    margin-left: -87px;
     padding: 0; /* для прокрутки назад */
     vertical-align: top;
   }
 
   &__item {
+    box-shadow: 0 1px 8px 0 rgba($black, 0.18);
     display: inline-block;
-    height: 428px; /* * */
-    /* margin-right: 57px; */ // отступы между элементами
+    height: 384px; /* * */
+    margin-right: 70px; // отступы между элементами
+    margin-top: 7px;
     position: relative;
     text-align: center;
-    vertical-align: top;
-    width: 241px;
+    vertical-align: middle;
+    width: 216px;
+
+    &:nth-child(3) {
+      height: 444px;
+      margin-left: 40px;
+      margin-right: 114px;
+      margin-top: 5px;
+      width: 250px;
+    }
+
+    &:nth-child(3) .screenshots__image {
+      height: 444px;
+      width: 250px;
+    }
 
     &:last-child {
       margin-right: 0;
