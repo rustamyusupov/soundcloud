@@ -5,10 +5,12 @@ document.addEventListener('DOMContentLoaded', function() {
   let menuItems = document.querySelectorAll('.menu__link');
   let btnLearnMore = document.querySelector('.btn--more');
   let btnDownload = document.querySelector('.btn--download');
+  let btnShowMore = document.querySelector('.btn--show');
 
   menuTrigger.addEventListener('click', showMenu);
   btnLearnMore.addEventListener('click', scrollPage);
   btnDownload.addEventListener('click', scrollPage);
+  btnShowMore.addEventListener('click', showTwees);
 
   menuItems = Array.prototype.slice.call(menuItems, 0);
   menuItems.forEach(function(item) {
@@ -38,5 +40,13 @@ document.addEventListener('DOMContentLoaded', function() {
         return -c / 2 * (t * (t - 2) - 1) + b;
       })
     })
+  }
+
+  function showTwees(event) {
+    event.preventDefault();
+
+    let tweetsList = document.querySelector('.tweets__list');
+
+    tweetsList.classList.toggle('tweets__list--show');
   }
 });

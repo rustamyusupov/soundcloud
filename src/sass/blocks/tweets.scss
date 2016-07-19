@@ -31,6 +31,10 @@
     margin: 0 auto;
     margin-bottom: 37px;
     width: 60%;
+
+    &--show .tweets__item:nth-child(n+4) {
+      display: block;
+    }
   }
 
   &__item {
