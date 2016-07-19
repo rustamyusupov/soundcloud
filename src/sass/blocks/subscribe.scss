@@ -1,5 +1,5 @@
 .subscribe {
-  background-color: $mostly-black;
+  background-color: $black-mostly;
   background-image: url("../img/bg-subscribe.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -64,11 +64,16 @@
       color: $white;
     }
   }
-
+  // TODO: отправка по нажатию на enter
   &__icon {
     fill: $white;
     left: 0;
     position: absolute;
     top: 0;
+
+    &:hover {
+      fill: $orange-pure;
+      transition: all 0.25s ease-in-out;
+    }
   }
 }

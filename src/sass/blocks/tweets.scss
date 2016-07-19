@@ -34,8 +34,10 @@
 
   &__item {
     color: $blue-dark-grayish2;
+    cursor: pointer;
     line-height: 26px;
     margin-bottom: 46px;
+    transition: all 0.25s ease-in-out;
 
     &:nth-child(n+4) {
       display: none;
@@ -43,6 +45,10 @@
 
     &:last-child {
       margin-bottom: 0;
+    }
+
+    &:hover {
+      color: $white;
     }
   }
 }

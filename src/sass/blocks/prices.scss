@@ -27,7 +27,37 @@
   &__item {
     border: 1px solid $grey-dark;
     text-align: center;
+    transition: all 0.25s ease-in-out;
     width: 29.1%;
+
+    &:hover {
+      border-color: transparent;
+      box-shadow: 0 4px 7px 0 rgba($black, 0.11);
+    }
+
+    &:hover .prices__price {
+      background-color: $gray-very-light2;
+      border-color: $gray-very-light2;
+      position: relative;
+
+      &::before,
+      &::after {
+        background-color: $orange-pure;
+        content: "";
+        height: 69px;
+        position: absolute;
+        top: -1px;
+        width: 4px;
+      }
+
+      &::before {
+        left: -1px;
+      }
+
+      &::after {
+        right: -1px;
+      }
+    }
   }
 
   &__name {

@@ -29,6 +29,11 @@
 
   &__image {
     fill: $blue-dark;
+    transition: all 0.25s ease-in-out;
+
+    &:hover {
+      fill: $orange-pure;
+    }
   }
 
   &__copyright {
