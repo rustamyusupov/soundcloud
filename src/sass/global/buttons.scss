@@ -48,6 +48,11 @@
     &:hover {
       background-color: transparent;
       border-color: none;
+
+      .subscribe__icon {
+        fill: $orange-pure;
+        transition: all 0.25s ease-in-out;
+      }
     }
   }
 

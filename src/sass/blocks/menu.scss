@@ -10,37 +10,35 @@
   &__trigger {
     @include font($proxima, 18px, 600);
 
-    align-items: center;
     background: none;
     border: none;
     color: $gray-very-light;
     cursor: pointer;
-    display: flex;
-    justify-content: space-between;
     height: 30px;
     letter-spacing: 1px;
     margin-bottom: 5px;
     padding: 0;
-    top: 48px;
+    position: relative;
+    text-align: left;
     width: 92px;
     z-index: 10;
   }
 
   &__trigger > span {
-    background: $white;
-    display: inline-block;
+    background-color: $white;
     height: 2px;
-    position: relative;
+    position: absolute;
+    right: 0;
+    top: 13px;
     transition: background 0.3s 0.5s;
-    vertical-align: bottom;
     width: 21px;
 
     &::before,
     &::after {
-      background: $white;
+      background-color: $white;
       content: "";
       height: 2px;
-      left: 0;
+      right: 0;
       position: absolute;
       transition: top 0.3s 0.3s, transform 0.3s;
       width: 100%;
