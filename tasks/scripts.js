@@ -13,7 +13,7 @@ module.exports = function js(options) {
       gulp.src(options.src),
       $.debug({title: 'js'}),
       $.if(isDev, $.sourcemaps.init()),
-      // $.babel(),
+      $.babel(),
       $.concat('script.js'),
       $.if(options.transfer, gulp.dest(options.build)),
       $.if(!isDev, $.uglify()),
