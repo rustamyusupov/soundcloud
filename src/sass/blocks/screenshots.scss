@@ -17,7 +17,7 @@
   &__slider {
     margin: 0 auto;
     position: relative;
-    width: 1300px; /* слайды + кнопки */
+    width: 1138px; /* слайды + кнопки */
   }
 
   &__frame {
@@ -28,19 +28,18 @@
     overflow: hidden;
     position: relative;
     white-space: nowrap;
-    width: 1300px; /* все слайды минус отступ справа у последнего */
+    width: 1138px; /* все слайды минус отступ справа у последнего */
   }
 
   &__list {
     display: inline-block;
-    height: 454px;
-    margin-left: -87px;
+    /* height: 454px; */
+    /* margin-left: -87px; */
     padding: 0; /* для прокрутки назад */
     vertical-align: top;
   }
 
   &__item {
-    box-shadow: 0 1px 8px 0 rgba($black, 0.18);
     display: inline-block;
     height: 384px; /* * */
     margin-right: 70px; // отступы между элементами
@@ -48,24 +47,29 @@
     position: relative;
     text-align: center;
     vertical-align: middle;
-    width: 216px;
-
-    &:nth-child(3) {
-      box-shadow: none;
-      height: 444px;
-      margin-left: 40px;
-      margin-right: 114px;
-      margin-top: 5px;
-      width: 250px;
-    }
-
-    &:nth-child(3) .screenshots__image {
-      height: 444px;
-      width: 250px;
-    }
+    width: 232px;
 
     &:last-child {
       margin-right: 0;
     }
   }
+
+  &__image {
+    box-shadow: 0 1px 8px 0 rgba($black, 0.18);
+  }
 }
+
+
+/*     &:nth-child(3) {
+  box-shadow: none;
+  height: 444px;
+  margin-left: 40px;
+  margin-right: 114px;
+  margin-top: 5px;
+  width: 250px;
+} */
+
+/*     &:nth-child(3) .screenshots__image {
+  height: 444px;
+  width: 250px;
+} */

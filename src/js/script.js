@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
   let btnDownload = document.querySelector('.btn--download');
   let btnShowMore = document.querySelector('.btn--show');
   let btnSubmit = document.querySelector('.btn--submit');
+  let slider = document.querySelector('.screenshots__slider');
 
   menuTrigger.addEventListener('click', showMenu);
   btnLearnMore.addEventListener('click', scrollPage);
@@ -19,6 +20,16 @@ document.addEventListener('DOMContentLoaded', function() {
     item.addEventListener('click', scrollPage);
   });
 
+  var screenshotsSlider = lory(slider, {
+    infinite: 4,
+    slidesToScroll: 1,
+    slideSpeed: 1000,
+    ease: 'cubic-bezier(0.455, 0.03, 0.515, 0.955)',
+    classNameFrame: 'screenshots__frame',
+    classNameSlideContainer: 'screenshots__list',
+    classNamePrevCtrl: 'btn--prev',
+    classNameNextCtrl: 'btn--next'
+  });
 
   function showMenu() {
     let menu = document.querySelector('.menu');
