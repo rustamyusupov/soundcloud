@@ -5,7 +5,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   color: $white;
-  min-height: 721px;
+  min-height: 671px;
+  padding-bottom: 50px;
 
   &__wrapper {
     @include container;

@@ -1,6 +1,7 @@
 .contacts {
-  min-height: 330px;
+  min-height: 280px;
   text-align: center;
+  padding-bottom: 50px;
 
   &__title {
     @include container;

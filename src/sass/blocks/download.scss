@@ -1,9 +1,11 @@
 .download {
+  background-color: $black-mostly;
   background-image: url("../img/bg-download.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 365px;
+  min-height: 315px;
+  padding-bottom: 50px;
 
   &__wrapper {
     @include container;

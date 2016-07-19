@@ -4,7 +4,8 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 362px;
+  min-height: 312px;
+  padding-bottom: 50px;
 
   &__wrapper {
     @include container;

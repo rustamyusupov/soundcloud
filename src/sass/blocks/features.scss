@@ -1,5 +1,6 @@
 .features {
-  min-height: 646px;
+  min-height: 596px;
+  padding-bottom: 50px;
 
   &__wrapper {
     @include container;
