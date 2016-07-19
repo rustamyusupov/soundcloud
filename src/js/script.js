@@ -7,12 +7,12 @@ document.addEventListener('DOMContentLoaded', function() {
   let btnDownload = document.querySelector('.btn--download');
 
   menuTrigger.addEventListener('click', showMenu);
-  btnLearnMore.addEventListener('click', jump.scroll);
-  btnDownload.addEventListener('click', jump.scroll);
+  btnLearnMore.addEventListener('click', scrollPage);
+  btnDownload.addEventListener('click', scrollPage);
 
   menuItems = Array.prototype.slice.call(menuItems, 0);
   menuItems.forEach(function(item) {
-    item.addEventListener('click', jump.scroll);
+    item.addEventListener('click', scrollPage);
   });
 
 
@@ -20,5 +20,23 @@ document.addEventListener('DOMContentLoaded', function() {
     let menu = document.querySelector('.menu');
 
     menu.classList.toggle('menu--show');
+  }
+
+  function scrollPage(event) {
+    event.preventDefault();
+
+    let offset = 0;
+    let elem = document.querySelector(this.hash);
+
+    jump.jump(elem, {
+      duration: 1500,
+      offset: offset,
+      easing: (function (t, b, c, d) {
+        t /= d / 2;
+        if (t < 1) return c / 2 * t * t + b;
+        t--;
+        return -c / 2 * (t * (t - 2) - 1) + b;
+      })
+    })
   }
 });

@@ -3,25 +3,7 @@ let jump = (function() {
 
   let start, options, target, distance, duration, timeStart, timeElapsed, next;
 
-  function scroll(event) {
-    event.preventDefault();
-
-    let offset = 0;
-    let elem = document.querySelector(this.hash);
-
-    _jump(elem, {
-      duration: 1500,
-      offset: offset,
-      easing: (function (t, b, c, d) {
-        t /= d / 2;
-        if (t < 1) return c / 2 * t * t + b;
-        t--;
-        return -c / 2 * (t * (t - 2) - 1) + b;
-      })
-    })
-  }
-
-  function _jump(target, opts) {
+  function jump(target, opts) {
     start = window.pageYOffset;
 
     options = {
@@ -43,7 +25,7 @@ let jump = (function() {
       ? options.duration(distance)
       : options.duration
 
-      requestAnimationFrame(function (time) {
+      requestAnimationFrame(function(time) {
         return _loop(time);
       });
   }
@@ -78,6 +60,6 @@ let jump = (function() {
   }
 
   return {
-    scroll: scroll
+    jump: jump
   }
 })();
