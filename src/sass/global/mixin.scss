@@ -4,6 +4,7 @@
 }
 
 @mixin container-fluid() {
+  min-width: 280px;
   width: auto;
 
   @media #{$break-large} {
