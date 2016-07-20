@@ -1,9 +1,11 @@
 .prices {
   min-height: 669px;
+  min-width: 280px;
 
   &__wrapper {
-    @include container;
+    @include container-fluid;
 
+    padding: 0 20px;
     padding-top: 73px;
   }
 
@@ -21,14 +23,19 @@
 
   &__list {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   &__item {
     border: 1px solid $grey-dark;
+    margin: 0 10px;
+    margin-bottom: 20px;
+    max-width: 293px;
+    min-width: 216px;
     text-align: center;
     transition: all 0.25s ease-in-out;
-    width: 29.1%;
+    width: 90%;
 
     &:hover {
       border-color: transparent;
@@ -86,5 +93,18 @@
     margin-bottom: 26px;
     margin-right: 10px;
     padding-top: 26px;
+  }
+}
+
+@media #{$break-large} {
+  .prices {
+    &__list {
+      justify-content: space-between;
+    }
+
+    &__item {
+      margin: 0;
+      width: 29.1%;
+    }
   }
 }
