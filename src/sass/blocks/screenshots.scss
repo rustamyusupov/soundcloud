@@ -1,5 +1,6 @@
 .screenshots {
   min-height: 763px;
+  min-width: 280px;
   text-align: center;
 
   &__title {
@@ -17,7 +18,6 @@
   &__slider {
     margin: 0 auto;
     position: relative;
-    width: 1138px; /* слайды + кнопки */
   }
 
   &__frame {
@@ -28,34 +28,57 @@
     overflow: hidden;
     position: relative;
     white-space: nowrap;
-    width: 1138px; /* все слайды минус отступ справа у последнего */
+    width: 232px; /* все слайды минус отступ справа у последнего */
   }
 
   &__list {
     display: inline-block;
     /* height: 454px; */
     /* margin-left: -87px; */
-    padding: 0; /* для прокрутки назад */
+    padding: 0;
     vertical-align: top;
   }
 
   &__item {
     display: inline-block;
-    height: 384px; /* * */
-    margin-right: 70px; // отступы между элементами
+    height: 384px;
     margin-top: 7px;
     position: relative;
     text-align: center;
     vertical-align: middle;
     width: 232px;
-
-    &:last-child {
-      margin-right: 0;
-    }
   }
 
   &__image {
     box-shadow: 0 1px 8px 0 rgba($black, 0.18);
+  }
+}
+
+@media #{$break-medium} {
+  .screenshots {
+    &__frame {
+      width: 716px;
+    }
+
+    &__item {
+      margin-right: 10px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@media #{$break-large} {
+  .screenshots {
+    &__frame {
+      width: 1138px;
+    }
+
+    &__item {
+      margin-right: 70px;
+    }
   }
 }
 
