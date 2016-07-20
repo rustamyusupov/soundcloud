@@ -5,11 +5,13 @@
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 315px;
+  min-width: 280px;
   padding-bottom: 50px;
 
   &__wrapper {
-    @include container;
+    @include container-fluid;
 
+    padding: 0 20px;
     padding-top: 96px;
     text-align: center;
   }
@@ -19,5 +21,38 @@
 
     color: $white-mostly;
     margin-bottom: 99px;
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    width: 280px;
+  }
+}
+
+@media #{$break-medium} {
+  .download__content {
+    width: 83%;
+  }
+
+  .btn--app {
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+@media #{$break-large} {
+  .download__content {
+    justify-content: space-between;
+    width: 83%;
+  }
+
+  .btn--app {
+    margin-right: 0;
   }
 }
