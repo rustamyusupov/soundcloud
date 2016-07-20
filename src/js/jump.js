@@ -1,7 +1,7 @@
-let jump = (function() {
+var jump = (function() {
   'use strict';
 
-  let start, options, target, distance, duration, timeStart, timeElapsed, next;
+  var start, options, target, distance, duration, timeStart, timeElapsed, next;
 
   function jump(target, opts) {
     start = window.pageYOffset;

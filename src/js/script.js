@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
   'use strict';
 
-  let menuTrigger = document.querySelector('.menu__trigger');
-  let menuItems = document.querySelectorAll('.menu__link');
-  let btnLearnMore = document.querySelector('.btn--more');
-  let btnDownload = document.querySelector('.btn--download');
-  let btnShowMore = document.querySelector('.btn--show');
-  let btnSubmit = document.querySelector('.btn--submit');
-  let slider = document.querySelector('.screenshots__slider');
+  var menuTrigger = document.querySelector('.menu__trigger');
+  var menuItems = document.querySelectorAll('.menu__link');
+  var btnLearnMore = document.querySelector('.btn--more');
+  var btnDownload = document.querySelector('.btn--download');
+  var btnShowMore = document.querySelector('.btn--show');
+  var btnSubmit = document.querySelector('.btn--submit');
+  var slider = document.querySelector('.screenshots__slider');
 
   menuTrigger.addEventListener('click', showMenu);
   btnLearnMore.addEventListener('click', scrollPage);
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   function showMenu() {
-    let menu = document.querySelector('.menu');
+    var menu = document.querySelector('.menu');
 
     menu.classList.toggle('menu--show');
   }
@@ -40,8 +40,8 @@ document.addEventListener('DOMContentLoaded', function() {
   function scrollPage(event) {
     event.preventDefault();
 
-    let offset = 0;
-    let elem = document.querySelector(this.hash);
+    var offset = 0;
+    var elem = document.querySelector(this.hash);
 
     jump.jump(elem, {
       duration: 1500,
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function showTwees(event) {
     event.preventDefault();
 
-    let tweetsList = document.querySelector('.tweets__list');
+    var tweetsList = document.querySelector('.tweets__list');
 
     tweetsList.classList.toggle('tweets__list--show');
   }
