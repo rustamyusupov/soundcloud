@@ -1,7 +1,9 @@
 header {
+  @include container-fluid;
+
   padding-top: 47px;
   position: absolute;
   right: 50%;
   transform: translateX(50%);
-  width: 1005px;
+  width: 83.5%;
 }
