@@ -95,6 +95,14 @@
   }
 }
 
+@media #{$break-medium} {
+  .prices {
+    &__item {
+      width: 45%;
+    }
+  }
+}
+
 @media #{$break-large} {
   .prices {
     &__list {
