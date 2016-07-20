@@ -5,10 +5,11 @@
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 312px;
+  min-width: 280px;
   padding-bottom: 50px;
 
   &__wrapper {
-    @include container;
+    @include container-fluid;
 
     padding-top: 113px;
   }
@@ -30,15 +31,17 @@
   }
 
   &__form {
+    margin: 0 auto;
+    max-width: 624px;
     position: relative;
-    text-align: center;
+    width: 62%;
 
     &::after {
       border-left: 1px solid $white;
       content: "";
       color: $white;
       height: 19px;
-      left: 611px;
+      right: 32%;
       position: absolute;
       top: 23px;
       width: 1px;
@@ -56,10 +59,10 @@
     line-height: 18px;
     padding-bottom: 25px;
     padding-left: 30px;
-    padding-right: 222px;
+    padding-right: 35%;
     padding-top: 22px;
     text-align: right;
-    width: 624px;
+    width: 100%;
 
     &::placeholder {
       color: $white;
@@ -68,7 +71,7 @@
   // TODO: отправка по нажатию на enter
   &__icon {
     fill: $white;
-    left: 0;
+    right: 0;
     position: absolute;
     top: 0;
 
